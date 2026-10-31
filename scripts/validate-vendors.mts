@@ -23,7 +23,7 @@ let parsed: unknown;
 try {
   parsed = JSON.parse(readFileSync(dataPath, "utf8"));
 } catch (error) {
-  console.error(`✗ data/vendors.json is not valid JSON.`);
+  console.error("FAIL  data/vendors.json is not valid JSON.");
   console.error(`  ${(error as Error).message}`);
   console.error(`\n  A trailing comma after the last item in a list is the usual cause.`);
   process.exit(1);
@@ -33,11 +33,11 @@ const errors = validateVendorFile(parsed);
 
 if (errors.length === 0) {
   const count = (parsed as { vendors: unknown[] }).vendors.length;
-  console.log(`✓ data/vendors.json is valid — ${count} vendors.`);
+  console.log(`OK    data/vendors.json is valid - ${count} vendors.`);
   process.exit(0);
 }
 
-console.error(`✗ ${errors.length} problem${errors.length === 1 ? "" : "s"} in data/vendors.json:\n`);
+console.error(`FAIL  ${errors.length} problem${errors.length === 1 ? "" : "s"} in data/vendors.json:\n`);
 for (const error of errors) {
   const field = error.field ? `.${error.field}` : "";
   console.error(`  ${error.vendorId}${field}: ${error.message}`);
