@@ -1,0 +1,28 @@
+# Most pull requests here change data/vendors.json rather than code, so the
+# check that matters runs first and reports in plain language. A contributor
+# who has never written TypeScript should get "your entry is missing Tuesday",
+# not a stack trace.
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Check the vendor data
+        run: pnpm validate
+      - run: pnpm test
+      - run: pnpm typecheck

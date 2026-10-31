@@ -1,0 +1,358 @@
+{
+  "$comment": "SEED DATA. Every entry here is a placeholder written to give the app something to render — none has been checked by anyone, which is why the assuranceNote on each one says so. Correcting an entry, or adding a real vendor you know, is the most useful contribution to this project. Run `pnpm validate` after editing.",
+  "vendors": [
+    {
+      "id": "mama-risi-akoka",
+      "name": "Mama Risi Buka",
+      "area": "Akoka",
+      "description": "Amala and ewedu joint a short walk from the second gate. Busy at lunch.",
+      "landmark": "Off Akoka Road, near the second gate",
+      "priceBand": "₦",
+      "assurance": "community-reported",
+      "assuranceNote": "SEED ENTRY — not yet checked by anyone. Needs a student to confirm.",
+      "hours": {
+        "sunday": null,
+        "monday": {
+          "open": "08:00",
+          "close": "19:00"
+        },
+        "tuesday": {
+          "open": "08:00",
+          "close": "19:00"
+        },
+        "wednesday": {
+          "open": "08:00",
+          "close": "19:00"
+        },
+        "thursday": {
+          "open": "08:00",
+          "close": "19:00"
+        },
+        "friday": {
+          "open": "08:00",
+          "close": "19:00"
+        },
+        "saturday": {
+          "open": "08:00",
+          "close": "19:00"
+        }
+      },
+      "dishes": [
+        "Amala",
+        "Ewedu",
+        "Gbegiri",
+        "Assorted beef"
+      ]
+    },
+    {
+      "id": "suya-spot-bariga",
+      "name": "Alhaji Suya Spot",
+      "area": "Bariga",
+      "description": "Evening suya stand. Opens late and runs past midnight at weekends.",
+      "landmark": "Bariga roundabout",
+      "priceBand": "₦",
+      "assurance": "community-reported",
+      "assuranceNote": "SEED ENTRY — not yet checked by anyone. Needs a student to confirm.",
+      "hours": {
+        "sunday": {
+          "open": "17:00",
+          "close": "23:30"
+        },
+        "monday": {
+          "open": "17:00",
+          "close": "23:30"
+        },
+        "tuesday": {
+          "open": "17:00",
+          "close": "23:30"
+        },
+        "wednesday": {
+          "open": "17:00",
+          "close": "23:30"
+        },
+        "thursday": {
+          "open": "17:00",
+          "close": "23:30"
+        },
+        "friday": {
+          "open": "17:00",
+          "close": "02:00"
+        },
+        "saturday": {
+          "open": "17:00",
+          "close": "02:00"
+        }
+      },
+      "dishes": [
+        "Suya",
+        "Kilishi",
+        "Masa"
+      ]
+    },
+    {
+      "id": "campus-cafeteria",
+      "name": "Student cafeteria",
+      "area": "On campus",
+      "description": "Main cafeteria. Mixed kitchen — ask which pots are which before ordering.",
+      "landmark": "Central campus",
+      "priceBand": "₦",
+      "assurance": "unverified",
+      "assuranceNote": "",
+      "hours": {
+        "sunday": null,
+        "monday": {
+          "open": "07:00",
+          "close": "18:00"
+        },
+        "tuesday": {
+          "open": "07:00",
+          "close": "18:00"
+        },
+        "wednesday": {
+          "open": "07:00",
+          "close": "18:00"
+        },
+        "thursday": {
+          "open": "07:00",
+          "close": "18:00"
+        },
+        "friday": {
+          "open": "07:00",
+          "close": "18:00"
+        },
+        "saturday": {
+          "open": "09:00",
+          "close": "15:00"
+        }
+      },
+      "dishes": [
+        "Rice and stew",
+        "Beans",
+        "Jollof"
+      ]
+    },
+    {
+      "id": "northern-kitchen-yaba",
+      "name": "Northern Kitchen",
+      "area": "Yaba",
+      "description": "Tuwo, miyan kuka and other northern dishes. Small, usually full by 1pm.",
+      "landmark": "Herbert Macaulay Way, Yaba",
+      "priceBand": "₦₦",
+      "assurance": "muslim-owned",
+      "assuranceNote": "SEED ENTRY — claim unconfirmed. Must be checked in person before this level is trusted.",
+      "hours": {
+        "sunday": {
+          "open": "10:00",
+          "close": "20:00"
+        },
+        "monday": {
+          "open": "10:00",
+          "close": "20:00"
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "20:00"
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "20:00"
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "20:00"
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "20:00"
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "20:00"
+        }
+      },
+      "dishes": [
+        "Tuwo shinkafa",
+        "Miyan kuka",
+        "Dan wake"
+      ]
+    },
+    {
+      "id": "shawarma-corner-akoka",
+      "name": "Shawarma Corner",
+      "area": "Akoka",
+      "description": "Shawarma and grilled chicken. Evening queue is long but moves.",
+      "landmark": "Opposite the Akoka junction",
+      "priceBand": "₦₦",
+      "assurance": "community-reported",
+      "assuranceNote": "SEED ENTRY — not yet checked by anyone.",
+      "hours": {
+        "sunday": {
+          "open": "15:00",
+          "close": "23:00"
+        },
+        "monday": {
+          "open": "15:00",
+          "close": "23:00"
+        },
+        "tuesday": {
+          "open": "15:00",
+          "close": "23:00"
+        },
+        "wednesday": {
+          "open": "15:00",
+          "close": "23:00"
+        },
+        "thursday": {
+          "open": "15:00",
+          "close": "23:00"
+        },
+        "friday": {
+          "open": "15:00",
+          "close": "23:00"
+        },
+        "saturday": {
+          "open": "15:00",
+          "close": "23:00"
+        }
+      },
+      "dishes": [
+        "Shawarma",
+        "Grilled chicken",
+        "Chips"
+      ]
+    },
+    {
+      "id": "iya-basira-rice",
+      "name": "Iya Basira Rice",
+      "area": "Akoka",
+      "description": "Cheapest proper plate near the hostels. Rice, beans, plantain.",
+      "landmark": "Behind the hostel block",
+      "priceBand": "₦",
+      "assurance": "community-reported",
+      "assuranceNote": "SEED ENTRY — not yet checked by anyone.",
+      "hours": {
+        "sunday": {
+          "open": "12:00",
+          "close": "18:00"
+        },
+        "monday": {
+          "open": "07:30",
+          "close": "20:00"
+        },
+        "tuesday": {
+          "open": "07:30",
+          "close": "20:00"
+        },
+        "wednesday": {
+          "open": "07:30",
+          "close": "20:00"
+        },
+        "thursday": {
+          "open": "07:30",
+          "close": "20:00"
+        },
+        "friday": {
+          "open": "07:30",
+          "close": "20:00"
+        },
+        "saturday": {
+          "open": "07:30",
+          "close": "20:00"
+        }
+      },
+      "dishes": [
+        "White rice",
+        "Beans",
+        "Dodo",
+        "Fried fish"
+      ]
+    },
+    {
+      "id": "yaba-grill-house",
+      "name": "Yaba Grill House",
+      "area": "Yaba",
+      "description": "Sit-down grill. The pricier option when someone else is paying.",
+      "landmark": "Near Yaba Tech gate",
+      "priceBand": "₦₦₦",
+      "assurance": "certified",
+      "assuranceNote": "SEED ENTRY — certification claim unconfirmed. Do not trust until someone has seen the certificate.",
+      "hours": {
+        "sunday": {
+          "open": "12:00",
+          "close": "22:00"
+        },
+        "monday": null,
+        "tuesday": {
+          "open": "12:00",
+          "close": "22:00"
+        },
+        "wednesday": {
+          "open": "12:00",
+          "close": "22:00"
+        },
+        "thursday": {
+          "open": "12:00",
+          "close": "22:00"
+        },
+        "friday": {
+          "open": "12:00",
+          "close": "22:00"
+        },
+        "saturday": {
+          "open": "12:00",
+          "close": "22:00"
+        }
+      },
+      "dishes": [
+        "Grilled fish",
+        "Peppered chicken",
+        "Fried rice"
+      ]
+    },
+    {
+      "id": "tea-shop-bariga",
+      "name": "Mai Shayi tea shop",
+      "area": "Bariga",
+      "description": "Bread, eggs and tea through the night. Where people end up after Isha.",
+      "landmark": "Bariga, off the main road",
+      "priceBand": "₦",
+      "assurance": "muslim-owned",
+      "assuranceNote": "SEED ENTRY — claim unconfirmed. Needs checking in person.",
+      "hours": {
+        "sunday": {
+          "open": "18:00",
+          "close": "05:00"
+        },
+        "monday": {
+          "open": "18:00",
+          "close": "05:00"
+        },
+        "tuesday": {
+          "open": "18:00",
+          "close": "05:00"
+        },
+        "wednesday": {
+          "open": "18:00",
+          "close": "05:00"
+        },
+        "thursday": {
+          "open": "18:00",
+          "close": "05:00"
+        },
+        "friday": {
+          "open": "18:00",
+          "close": "05:00"
+        },
+        "saturday": {
+          "open": "18:00",
+          "close": "05:00"
+        }
+      },
+      "dishes": [
+        "Tea",
+        "Bread and egg",
+        "Indomie"
+      ]
+    }
+  ]
+}
