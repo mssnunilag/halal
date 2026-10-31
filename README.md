@@ -33,7 +33,7 @@ entry — including when the answer is "nobody has checked".
   "suya", not for a place they have never heard of.
 - Sorted best-assured first.
 
-## ⚠️ The data is all placeholder
+## Warning: The data is all placeholder
 
 Every entry currently in [`data/vendors.json`](./data/vendors.json) was written to
 give the app something to render. **None of it has been checked by anybody.** Do not

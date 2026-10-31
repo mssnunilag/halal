@@ -2,11 +2,11 @@
 
 Comment on the matching GitHub issue to claim one.
 
-Difficulty: 🟢 no JavaScript needed · 🟡 straightforward code · 🔴 needs some thought
+Difficulty: [Easy] no JavaScript needed · [Medium] straightforward code · [Hard] needs some thought
 
 ---
 
-### 1. 🟢 Verify or correct a seed vendor
+### 1. [Easy] Verify or correct a seed vendor
 
 **Problem.** All eight entries in `data/vendors.json` are placeholders nobody has
 checked. Some may not exist. Some may have the wrong hours, area or price band.
@@ -19,7 +19,7 @@ checked and when. Run `pnpm validate`.
 
 ---
 
-### 2. 🟢 Add a real vendor
+### 2. [Easy] Add a real vendor
 
 **Problem.** Eight placeholder entries is not a directory.
 
@@ -31,7 +31,7 @@ entries should be `community-reported`.
 
 ---
 
-### 3. 🟡 Show the week's opening hours on each card
+### 3. [Medium] Show the week's opening hours on each card
 
 **Problem.** A card says "Open now" or "Closed now" and nothing else. Someone planning
 tomorrow, or wondering whether anywhere is open after Isha, cannot find out.
@@ -44,7 +44,7 @@ read as an error.
 
 ---
 
-### 4. 🟡 "Open now" should keep up with the clock
+### 4. [Medium] "Open now" should keep up with the clock
 
 **Problem.** The current time is read once when the page loads. Leave the tab open
 over a vendor's closing time and the badge is wrong until you reload.
@@ -56,7 +56,7 @@ one-second tick is wasteful for something that changes on the minute.
 
 ---
 
-### 5. 🟡 Ramadan hours
+### 5. [Medium] Ramadan hours
 
 **Problem.** In Ramadan most of these places change hours completely, and many open
 specifically for iftar. The data model cannot express that at all, so during the one
@@ -71,7 +71,7 @@ changes the data model and every contributor will have to live with it.
 
 ---
 
-### 6. 🔴 Distance, honestly
+### 6. [Hard] Distance, honestly
 
 **Problem.** "Bariga roundabout" means nothing to someone in their first week. The
 single most useful missing fact is how far a place is from where they are standing.
@@ -87,7 +87,7 @@ unverified coordinate is worse than none, because it looks precise.
 
 ---
 
-### 7. 🟡 Let someone report a problem with an entry
+### 7. [Medium] Let someone report a problem with an entry
 
 **Problem.** If a student notices a place has closed down, their only route to fixing
 it is opening a pull request — which most people will not do.
@@ -100,7 +100,7 @@ data — a link.
 
 ---
 
-### 8. 🟢 Improve the validator's error messages
+### 8. [Easy] Improve the validator's error messages
 
 **Problem.** The messages are decent but written by someone who already knew the
 schema. A first-time contributor is the right person to say where they are confusing.
@@ -113,7 +113,7 @@ it.
 
 ---
 
-### 9. 🟡 Make the filters shareable
+### 9. [Medium] Make the filters shareable
 
 **Problem.** You find three cheap places in Akoka open now and cannot send that to
 anyone — the filter state lives only in React.
@@ -125,7 +125,7 @@ filtered view can be pasted into a WhatsApp group.
 
 ---
 
-### 10. 🔴 Decide what to do about mixed kitchens
+### 10. [Hard] Decide what to do about mixed kitchens
 
 **Problem.** The student cafeteria is in the list as `unverified` with a description
 saying to ask which pots are which. That is honest but not actually useful, and it is

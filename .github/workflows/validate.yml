@@ -1,7 +1,3 @@
-# Most pull requests here change data/vendors.json rather than code, so the
-# check that matters runs first and reports in plain language. A contributor
-# who has never written TypeScript should get "your entry is missing Tuesday",
-# not a stack trace.
 name: Validate
 
 on:
@@ -22,6 +18,8 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - name: Ensure no emojis
+        run: pnpm check:emojis
       - name: Check the vendor data
         run: pnpm validate
       - run: pnpm test

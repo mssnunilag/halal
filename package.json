@@ -10,8 +10,9 @@
     "start": "next start",
     "test": "vitest run",
     "test:watch": "vitest",
-    "validate": "node --experimental-strip-types scripts/validate-vendors.mts",
-    "typecheck": "tsc --noEmit"
+    "validate": "node scripts/check-no-emojis.mjs && node --experimental-strip-types scripts/validate-vendors.mts",
+    "typecheck": "tsc --noEmit",
+    "check:emojis": "node scripts/check-no-emojis.mjs"
   },
   "dependencies": {
     "next": "15.5.4",
