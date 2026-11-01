@@ -16,6 +16,7 @@ import {
   isOpenAt,
   sortVendors,
 } from "@/lib/vendors";
+import { parseFilters, serialiseFilters } from "@/lib/filters";
 
 const VENDORS = raw.vendors as unknown as Vendor[];
 
@@ -32,6 +33,25 @@ export default function Home() {
   const [minAssurance, setMinAssurance] = useState<Assurance | "">("");
   const [query, setQuery] = useState("");
   const [openOnly, setOpenOnly] = useState(false);
+
+  // The URL is read after mount, not during render, for the same hydration
+  // reason as `now` below. Writing waits for that read: before it, the state
+  // is still the defaults and would wipe the shared link we are about to load.
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    const initial = parseFilters(window.location.search);
+    setArea(initial.area);
+    setMaxPrice(initial.maxPrice);
+    setMinAssurance(initial.minAssurance);
+    setQuery(initial.query);
+    setOpenOnly(initial.openOnly);
+    setLoaded(true);
+  }, []);
+  useEffect(() => {
+    if (!loaded) return;
+    const qs = serialiseFilters({ area, maxPrice, minAssurance, query, openOnly });
+    window.history.replaceState(null, "", qs ? `?${qs}` : window.location.pathname);
+  }, [loaded, area, maxPrice, minAssurance, query, openOnly]);
 
   // Read on the client only: computing "now" during render would make the
   // server and client markup disagree and produce a hydration mismatch.
