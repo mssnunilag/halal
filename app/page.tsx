@@ -14,6 +14,7 @@ import {
   WEEKDAYS,
   filterVendors,
   isOpenAt,
+  reportProblemUrl,
   sortVendors,
 } from "@/lib/vendors";
 
@@ -194,6 +195,17 @@ export default function Home() {
                   )}
                 </p>
               </div>
+
+              <p className="mt-2 text-xs">
+                <a
+                  href={reportProblemUrl(vendor)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--color-ink-soft)] underline underline-offset-2"
+                >
+                  Something&apos;s wrong here?
+                </a>
+              </p>
             </li>
           ))}
         </ul>
