@@ -85,6 +85,20 @@ export function parseClock(value: string): number | null {
 }
 
 /**
+ * The text a student reads for one day's hours. A close earlier than the
+ * open is after midnight, and is labelled as such: "18:00 – 02:00" on its
+ * own looks like a typo, and a student who reads it that way may decide the
+ * place never opens at that hour.
+ */
+export function formatDayHours(hours: DayHours): string {
+  if (!hours) return "Closed";
+  const open = parseClock(hours.open);
+  const close = parseClock(hours.close);
+  const nextDay = open !== null && close !== null && close < open ? " (next day)" : "";
+  return `${hours.open} – ${hours.close}${nextDay}`;
+}
+
+/**
  * Whether the vendor is open at a given moment.
  *
  * Handles the case that bites every opening-hours implementation: a place

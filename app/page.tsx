@@ -16,6 +16,7 @@ import {
   isOpenAt,
   sortVendors,
 } from "@/lib/vendors";
+import { WeekHours } from "./week-hours";
 
 const VENDORS = raw.vendors as unknown as Vendor[];
 
@@ -177,6 +178,8 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
+
+              <WeekHours vendor={vendor} today={now?.day} />
 
               <div className="mt-3 flex items-start gap-2 border-t border-[var(--color-rule)] pt-2">
                 <span

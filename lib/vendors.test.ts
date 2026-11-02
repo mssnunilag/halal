@@ -4,6 +4,7 @@ import {
   type Vendor,
   type Weekday,
   filterVendors,
+  formatDayHours,
   isOpenAt,
   parseClock,
   sortVendors,
@@ -189,5 +190,11 @@ describe("sortVendors", () => {
     const before = vendors.map((v) => v.id);
     sortVendors(vendors);
     expect(vendors.map((v) => v.id)).toEqual(before);
+  });
+});
+
+describe("formatDayHours", () => {
+  it("marks a close after midnight as the next day, so it does not read as an error", () => {
+    expect(formatDayHours({ open: "18:00", close: "02:00" })).toBe("18:00 – 02:00 (next day)");
   });
 });
