@@ -178,6 +178,19 @@ export function sortVendors(vendors: readonly Vendor[]): Vendor[] {
   );
 }
 
+const ISSUES_NEW_URL = "https://github.com/mssnunilag/halal/issues/new";
+
+/** A link, not a form: GitHub fills the issue in from the query string, so the
+ *  site stores and sends nothing. The vendor id goes in the body because it is
+ *  the one thing a maintainer needs to find the entry in data/vendors.json. */
+export function reportProblemUrl(vendor: Pick<Vendor, "id" | "name">): string {
+  const params = new URLSearchParams({
+    title: `Problem with ${vendor.name} (${vendor.id})`,
+    body: `Vendor id: ${vendor.id}\n\nWhat is wrong:\n`,
+  });
+  return `${ISSUES_NEW_URL}?${params}`;
+}
+
 export interface ValidationError {
   readonly vendorId: string;
   readonly field: string;

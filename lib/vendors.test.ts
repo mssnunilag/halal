@@ -6,6 +6,7 @@ import {
   filterVendors,
   isOpenAt,
   parseClock,
+  reportProblemUrl,
   sortVendors,
   validateVendorFile,
 } from "./vendors";
@@ -13,6 +14,18 @@ import {
 const vendors = raw.vendors as unknown as Vendor[];
 
 const at = (hour: number, minute = 0) => hour * 60 + minute;
+
+describe("reportProblemUrl", () => {
+  it("opens a new issue on the repo with the vendor id in the title and body", () => {
+    const vendor = vendors[0];
+    const url = new URL(reportProblemUrl(vendor));
+    expect(`${url.origin}${url.pathname}`).toBe(
+      "https://github.com/mssnunilag/halal/issues/new"
+    );
+    expect(url.searchParams.get("title")).toContain(vendor.id);
+    expect(url.searchParams.get("body")).toContain(`Vendor id: ${vendor.id}`);
+  });
+});
 
 describe("the shipped data", () => {
   it("passes its own validator", () => {
